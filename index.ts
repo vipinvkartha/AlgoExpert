@@ -1,10 +1,5 @@
-import {tournamentWinner} from './src/TournamentWinner';
+import { classPhotos } from './src/ClassPhotos';
 
-const competitions = [
-    ["HTML", "Java"],
-    ["Java", "Python"],
-    ["Python", "HTML"]
-  ];
-const results = [0,1,1];
-console.log("Test");
-console.log(tournamentWinner(competitions,results));
+
+const input = "abcadeb"
+//console.log(firstNonRepeatingCharacter(input));
