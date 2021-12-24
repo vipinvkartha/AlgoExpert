@@ -24,5 +24,24 @@ export class Node {
           }
       return array;
     }
+
+    depthFirstSearchIterative(array: string[]) {
+      const stack: Node[] = [];
+      stack.push(this);
+      const visitedMap = new Set<string>();
+      while(stack.length !== 0) {
+        const curr = stack.pop()!;
+        if(!visitedMap.has(curr.name)) {
+          array.push(curr.name);
+          visitedMap.add(curr.name);
+        }
+        for (let j = curr.children.length - 1; j >= 0;j--) {
+          if(!visitedMap.has(curr.children[j].name)) {
+            stack.push(curr.children[j]);
+          }
+        }
+      }
+      return array;
+    }
   }
   
